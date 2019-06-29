@@ -1,0 +1,25 @@
+<h2>{{'hello'|translate}}</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let h of produit">
+            <td>{{h.title}}</td>
+            <td>{{h.description}}</td>
+            <td>{{h.price}}</td>
+            <td>{{h.product_type}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="gestion(h._id)">Detail</button>
+                <button class="btn btn-danger" (click)="delete(h._id)">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
